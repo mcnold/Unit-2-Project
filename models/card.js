@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 const { Schema , model } = mongoose
 
 const cardSchema = new Schema({
-  cards: [{
         deck: String,
         type: String,
         img: String,
@@ -14,7 +13,7 @@ const cardSchema = new Schema({
         meaning_rev: String,
         desc: String
 
-    }]
+
 })
 
 const Card = model('Card', cardSchema)

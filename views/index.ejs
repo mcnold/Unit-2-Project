@@ -3,15 +3,20 @@
 <div class="container">
     <div class="row">
       <div class="one-half column" style="margin-top: 25%">
-        <h4>The Cards of the Sacred Tarot</h4>
+        <h3>The Cards of the Sacred Tarot</h3>
         <ul>
           <% for (let i = 0; i < card.length; i++) { %>
             <li>
-                <a href="/card/<%=card[i].id%>"><%=card[i].name %> </a>
+                <link rel="icon" type="image/jpeg" href="<%=card[i].img%>">
+                <a href="/card/<%=card[i].id%>"><%=card[i].deck%>: <%=card[i].name %> </a>
+                <form action="/card/<%= card[i].id %>?_method=DELETE" method="POST">
+                  <input type="submit" value="Delete">
+                </form>
             </li>
             <% } %>
         </ul>
-        <a href="user/myStudyList">My Study List</a>
+        <a href="/user/myStudyList">My Study Resources</a>
+        <a href="/card/new">Add a Card to Study</a>
         <a href="/user/signout">Sign Out</a>
       </div>
     </div>

@@ -1,0 +1,24 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h2><%=card.name %></h2>
+        
+        <h5><%=card.name %> is card number <%= card.value %> in the Journey of the <%=card.deck%>.</h5><br>
+         <h5>The upright meaning of the card: <%= card.meaning_up %></h5><br>
+         <h5>The reversed meaning of the card: <%= card.meaning_rev %></h5>
+         <img src="<%= card.img %>"><br>
+        <div>
+        <p>
+            <br>
+            Description of <%= card.name %>: <%=card.desc %>
+        </p>
+        </div>
+        <a href="/card">Back to Index</a>
+        <a href="/user/signout">Sign Out</a>
+      </div>
+    </div>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>

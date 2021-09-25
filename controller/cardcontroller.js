@@ -13,6 +13,7 @@ const authRequired = (req, res, next) => {
 // set up index for cards 
 router.get('/', (req, res) => {
   Card.find({}, (err, allCards) => {
+    console.log(allCards[0])
     res.render('index.ejs', {
       card: allCards
     })
@@ -293,6 +294,7 @@ router.get('/seed', (req, res) => {
       desc: "As this final message of the Major Trumps is unchanged--and indeed unchangeable--in respect of its design, it has been partly described already regarding its deeper sense. It represents also the perfection and end of the Cosmos, the secret which is within it, the rapture of the universe when it understands itself in God. It is further the state of the soul in the consciousness of Divine Vision, reflected from the self-knowing spirit."
     },
   ], (err, data) => {
+    console.log(data)
     if (err) {
       console.log(err)
     }
