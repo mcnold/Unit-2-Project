@@ -1,8 +1,5 @@
 const mongoose = require('mongoose')
-const { Schema , model } = mongoose
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring
-
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
   username: {
         type: String,
         required: true,
@@ -11,6 +8,6 @@ const userSchema = new Schema({
     password: String,
 })
 
-const User = model('User', userSchema)
+const User = mongoose.model('User', userSchema)
 
 module.exports = User

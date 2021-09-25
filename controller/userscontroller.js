@@ -4,7 +4,7 @@ const User = require('../models/user')
 const router = express.Router()
 
 router.get('/register', (req, res) => {
-    res.render('user/register.ejs')
+    res.render('register.ejs')
 })
 
 router.post('/register', (req,res) => {

@@ -2,10 +2,9 @@ const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
 const session = require('express-session')
+require('dotenv').config()
 const PORT = process.env.PORT
-
 const mongoose = require('mongoose')
-
 const mongoURI = process.env.MONGODB_URI
 const db = mongoose.connection
 mongoose.connect(mongoURI, {
@@ -33,7 +32,7 @@ console.log(SESSION_SECRET)
 app.use(session({
   secret: SESSION_SECRET,
   resave: false,
-  saveUnitialized: false,
+  saveUninitialized: false,
 }))
 
 app.get('/check-session-property', (req, res) => {

@@ -2,14 +2,14 @@ const mongoose = require('mongoose')
 const { Schema , model } = mongoose
 
 const cardSchema = new Schema({
-  nhits: Number,
   cards: [{
+        deck: String,
         type: String,
-        name_short: String,
         img: String,
         name: String,
         value: Number,
         value_int: Number,
+        suit: String,
         meaning_up: String,
         meaning_rev: String,
         desc: String
@@ -17,7 +17,7 @@ const cardSchema = new Schema({
     }]
 })
 
-const Card = model('Card', userSchema)
+const Card = model('Card', cardSchema)
 
 module.exports = Card
 
