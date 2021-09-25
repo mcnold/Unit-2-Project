@@ -2,11 +2,17 @@ const express = require('express')
 const bcrypt = require('bcrypt')
 const User = require('../models/user')
 const router = express.Router()
+router.use(express.static('public'))
 
 router.get('/register', (req, res) => {
     res.render('register.ejs')
 })
-
+router.get('/landing', (req, res) => {
+    res.render('landing.ejs')
+})
+router.get('/myStudyList', (req, res) => {
+    res.render('myStudyList.ejs')
+})
 router.post('/register', (req,res) => {
     const salt = bcrypt.genSaltSync(10)
     req.body.password = bcrypt.hashSync(req.body.password, salt)
@@ -17,14 +23,14 @@ router.post('/register', (req,res) => {
         } else {
             User.create(req.body, (error, createdUser) => {
                 req.session.currentUser = createdUser
-                res.redirect('/user/welcome')
+                res.redirect('/user/landing')
               }  
             )}
         })
     })
 
 router.get('/signin', (req, res) => {
-    res.render('user/signin.ejs')
+    res.render('signin.ejs')
 })
 
 router.post('/signin', (req, res) => {
@@ -33,7 +39,7 @@ router.post('/signin', (req, res) => {
             const validLogin = bcrypt.compareSync(req.body.password, foundUser.password)
                 if (validLogin) {
                     req.session.currentUser = foundUser
-                    res.redirect('/user/welcome')
+                    res.redirect('/user/landing')
                 } else {
                     res.send('Invalid Username or Password.')
                 }
@@ -46,7 +52,7 @@ router.post('/signin', (req, res) => {
 // DESTROY session route
 router.get('/signout', (req, res) => {
 	req.session.destroy()
-	res.redirect('/user/signin')
+	res.redirect('/')
 })
 
 module.exports = router

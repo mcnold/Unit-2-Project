@@ -35,6 +35,11 @@ app.use(session({
   saveUninitialized: false,
 }))
 
+app.use((req, res, next) => {
+  res.locals.currentUser=req.session.currentUser
+  console.log("app.use", req.session.currentUser)
+  next()
+})
 app.get('/check-session-property', (req, res) => {
   if (req.session.someProperty) {
     res.send(req.session.someProperty)
@@ -50,6 +55,10 @@ app.get('/set-session-property/:value', (req, res) => {
 app.get('/destroy-session', (req, res) => {
   req.session.destroy()
   res.redirect('/user')
+})
+
+app.get('/', (req, res) => {
+  res.render('welcome.ejs')
 })
 // CONTROLLERS
 //const userController = require('./controller/usercontroller')

@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Card = require('../models/card')
-
+router.use(express.static('public'))
 //custom middleware to require authentication
 const authRequired = (req, res, next) => {
     if (req.session.currentUser) {

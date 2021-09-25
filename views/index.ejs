@@ -4,7 +4,15 @@
     <div class="row">
       <div class="one-half column" style="margin-top: 25%">
         <h4>The Cards of the Sacred Tarot</h4>
-        <p></p>
+        <ul>
+          <% for (let i = 0; i < card.length; i++) { %>
+            <li>
+                <a href="/card/<%=card[i].id%>"><%=card[i].name %> </a>
+            </li>
+            <% } %>
+        </ul>
+        <a href="user/myStudyList">My Study List</a>
+        <a href="/user/signout">Sign Out</a>
       </div>
     </div>
   </div>
