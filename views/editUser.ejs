@@ -1,0 +1,79 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h1>Edit Your Account.</h1>
+            <form action="/user/<%= user.id %>?_method=PUT" method="POST">
+                Username:
+                <input
+                type="text"
+                name="username"
+                value="<%= user.username %>"
+                /><br/>
+                Password:
+                <input
+                type="password"
+                value="<%= user.password %>"
+                /><br/>
+                Verify Password:
+                <input
+                type="password"
+                value="<%= user.verifyPassword %>"
+                /><br/>
+                <br>
+                <h4>User Information</h4>
+                First Name: 
+                <input 
+                type="text" 
+                name="firstName" 
+                value="<%= user.firstName %>"
+                /> <br/>
+                Last Name:  
+                <input 
+                type="text" 
+                name="lastName" 
+                value="<%= user.lastName %>"
+                /> <br/>
+                Address:
+                <input
+                type="text"
+                name="address"
+                value="<%= user.address %>"
+                > <br/>
+                City:
+                <input
+                type="text"
+                name="city"
+                value="<%= user.city %>"
+                > <br/>
+                State:
+                <input
+                type="text"
+                name="state"
+                value="<%= user.state %>"
+                > <br/>
+                Zip Code:
+                <input
+                type="text"
+                name="zipCode"
+                value="<%= user.zipCode %>"
+                > <br/>
+                <br>
+                <h4>Contact Information</h4>
+                Phone Number:
+                <input
+                type="tel"
+                name="phoneNumber"
+                value="<%= user.phoneNumber %>"
+                > <br/>
+                Email:
+                <input
+                type="text"
+                name="email"
+                value="<%= user.email %>"
+                > <br/>
+                <input type="submit" value="Update Info" />
+              </form>
+        <button class="u-full-width"><a href="/user/landing">User Home</a></button>
+
+        <%- include('./partials/footer.ejs') %>

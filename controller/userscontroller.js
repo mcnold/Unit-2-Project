@@ -3,12 +3,20 @@ const bcrypt = require('bcrypt')
 const User = require('../models/user')
 const router = express.Router()
 router.use(express.static('public'))
-
+const authRequired = (req, res, next) => {
+    if (req.session.currentUser) {
+        next()
+    } else {
+        res.send('You must be logged in to do that.')
+    }
+}
 router.get('/register', (req, res) => {
     res.render('register.ejs')
 })
 router.get('/landing', (req, res) => {
-    res.render('landing.ejs')
+  //  console.log(`Here is ${req.session.currentUser._id}`)
+    let currentUserID = req.session.currentUser._id
+    res.render('landing.ejs', {id: currentUserID})
 })
 router.get('/myStudyList', (req, res) => {
     res.render('myStudyList.ejs')
@@ -48,7 +56,36 @@ router.post('/signin', (req, res) => {
         }
     })
 })
-
+router.get('/:id/edit', authRequired, (req, res) => {
+    User.findById(req.params.id, (error, foundUser) => {
+      if (error) {
+        console.log(error)
+        res.send(error)
+      } else {
+        res.render('editUser.ejs', {
+          user: foundUser,
+        })
+      }
+    })
+  })
+  
+  router.put('/:id', (req, res) => {
+    User.findByIdAndUpdate(
+      req.params.id, 
+      req.body,
+      {
+        new: true,
+      },
+      (error, updatedUser) => {
+        if (error) {
+          console.log(error)
+          res.send(error)
+        } else {
+          res.redirect('/user/landing')
+        }
+      } )
+  })
+  
 // DESTROY session route
 router.get('/signout', (req, res) => {
 	req.session.destroy()
