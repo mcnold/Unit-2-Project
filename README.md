@@ -8,14 +8,16 @@ https://mcnold.github.io/Unit-2-Project/
 
 Project Description
 This is an application that provides information on all of the cards of the Major and Minor Arcana. It allows the user to make a study list and enter the meanings of each card for practice. The user can add or delete cards as they are mastered.
-image
-image
-image
 
-Wireframes
-image
-image
-image
+![image](https://media.git.generalassemb.ly/user/36412/files/10155100-1b0d-11ec-89f3-06029fc88a6e)
+![image](https://media.git.generalassemb.ly/user/36412/files/26bba800-1b0d-11ec-84ed-de661a037a56)
+![image](https://media.git.generalassemb.ly/user/36412/files/31763d00-1b0d-11ec-9d12-beb2dbd84ebc)
+
+
+## Wireframes
+![image](https://media.git.generalassemb.ly/user/36412/files/8ca82f80-1b0d-11ec-9663-105d80f065fb)
+![image](https://media.git.generalassemb.ly/user/36412/files/93cf3d80-1b0d-11ec-8f3b-6311029bffa0)
+![image](https://media.git.generalassemb.ly/user/36412/files/e7418b80-1b0d-11ec-9f62-69520b571305)
 
 User Stories
 As a tarot student, I want to visually see each card. I want to be able to update my study list (ex. add a card to study, delete a card to study). I want to be able to read a description of each card. I want to be able to add a description entry box for the study page for practice to demonstrate knowledge learned. I want to be able to understand the difference of the majors, the minors, the ranks, and the Tarot Journey/number position. I want to be able to clearly navigate the site.
