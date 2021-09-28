@@ -172,7 +172,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #42464e; }
+  color: #5c5f66; }
 
 
 /* Buttons
@@ -231,8 +231,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #2b3038;
-  border-color: #2b3038; }
+  background-color: #615f75;
+  border-color: #615f75; }
 
 
 /* Forms
