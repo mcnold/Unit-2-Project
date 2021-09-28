@@ -3,9 +3,9 @@
 <div class="container">
     <div class="row">
       <div style="margin-top: 10%">
-        <h1 class="one-half column" style="margin-top: 30%">Welcome, <%= currentUser.username %>.<br>What would you like to do today?</h1>
-            <img class="one-half column" style="margin-top: 20%"src="/images/treeoflifesideways.png">
+        <h1 style="margin-top: 20%">The Daily Horoscope.</h1>
             <p>
+                <div id="astro-widget" style="width:100%"></div><script type="text/javascript" src="https://divineapi.com/widget/daily_horoscope/widget.js?api=9dcb88e0137649590b755372b040afad&theme=#000000&color=#fff&text=#000&icon=2"></script>
             </p>
         <button class="u-full-width button-primary"><a href="/user/myStudyList">I Want to Access My Study Resources</a></button>
         <button class="u-full-width button-primary"><a href="/card">I Want to Review Individual Tarot Card Meanings</a></button>

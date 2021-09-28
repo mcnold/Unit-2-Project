@@ -39,7 +39,9 @@ router.get('/major', (req, res) => {
 router.get('/minor', (req, res) => {
     res.render('minor.ejs')
 })
-
+router.get('/horoscope', (req, res) => {
+    res.render('horoscope.ejs')
+})
 router.post('/register', (req,res) => {
     const salt = bcrypt.genSaltSync(10)
     req.body.password = bcrypt.hashSync(req.body.password, salt)

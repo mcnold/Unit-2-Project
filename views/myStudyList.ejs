@@ -2,49 +2,49 @@
 
 <div class="container">
     <div class="row">
-      <div style="margin-top: 25%">
-        <h1><%= currentUser.username %>'s Study Resources  <img src="/images/treeoflifesideways.png" width="150px" height="150px"></h1>
+      <div style="margin-top: 10%">
+        <h1><%= currentUser.username %>'s Study Resources   <img src="/images/treeoflifesideways.png" width="150px" height="150px"></h1>
         <br>
-        <hr>
+        <hr style="border-width: 1px; border-color:#ffffff">
         <ul>
             <h3>
-                <li>Learn new Spreads.
-                <img  class="u-pull-right"src="/images/Tarot Spread.png"width="65px" height="60px">
-                </li>
+                Learn new Spreads.
+                <img style="border-color: black; border-width: 1px"class="u-pull-center"src="/images/Tarot Spread.png"width="100px" height="90px">
+                
             </h3>
             <h3>
-                <li>
+                
                 Learn the Journey of the Major Arcana.
-                <img class="u-pull-right"src="/images/TheSun.jpeg" width="50px" height="60px">
-                </li>
+                <img style="border-color: black"class="u-pull-center"src="/images/clipart54747.png" width="80px" height="90px">
+                
             </h3>
             <h3>
-                <li>
+                
                 Learn the Purpose of the Minor Arcana.
-                <img class="u-pull-right"src="/images/6ofswords.png" width="50px" height="60px">
-                </li>
+                <img style="border-color: black"class="u-pull-center"src="/images/6ofswords.png" width="65px" height="85px">
+                
             </h3>
             <h3>
-                <li>
+            
                 Learn the Suits.
-                <img class="u-pull-right"src="/images/Earth Elements.png" width="50px" height="60px">
-                </li>
+                <img style="border-color: black"class="u-pull-center"src="/images/Sagittarius.png" width="75px" height="75px">
+                
             </h3>
             <h3>
-                <li>
+                
                 Learn the Ranks.
-                <img class="u-pull-right"src="/images/Ranks.png" width="50px" height="60px">
-                </li>
+                <img style="border-color: black"class="u-pull-center"src="/images/Ranks.png" width="70px" height="90px">
+                
             </h3>
             <h3>
-                <li>
+                
                 Learn how Tarot and Astrology connect.
-                <img class="u-pull-right"src="/images/NorthNode.png" width="50px" height="60px">
-                </li>
+                <a href="/user/astrology"><img style="border-color: black"class="u-pull-center"src="/images/NorthNode.png" width="80px" height="70px"></a>
+                
             </h3>
-            <hr>
-            <h5>Check out your daily horoscope.</h5>
-        <div id="astro-widget" style="width:100%"></div><script type="text/javascript" src="https://divineapi.com/widget/daily_horoscope/widget.js?api=9dcb88e0137649590b755372b040afad&theme=#000000&color=#fff&text=#000&icon=2"></script>
+            <hr style="border-width: 1px; border-color:#ffffff">
+            <a href="/user/horoscope"><h5 style="color:cadetblue">Need a little fun? Check out your daily horoscope.</h5></a>
+        
     </ul>
     <button class="u-full-width button-primary"><a href="/user/landing">User Home</a></button>
     <button class="u-full-width button-primary"><a href="/user/signout">Sign Out</a></button>
