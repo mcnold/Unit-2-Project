@@ -21,6 +21,25 @@ router.get('/landing', (req, res) => {
 router.get('/myStudyList', (req, res) => {
     res.render('myStudyList.ejs')
 })
+router.get('/spreads', (req, res) => {
+    res.render('spreads.ejs')
+})
+router.get('/suits', (req, res) => {
+    res.render('suits.ejs')
+})
+router.get('/ranks', (req, res) => {
+    res.render('ranks.ejs')
+})
+router.get('/astrology', (req, res) => {
+    res.render('astrology.ejs')
+})
+router.get('/major', (req, res) => {
+    res.render('major.ejs')
+})
+router.get('/minor', (req, res) => {
+    res.render('minor.ejs')
+})
+
 router.post('/register', (req,res) => {
     const salt = bcrypt.genSaltSync(10)
     req.body.password = bcrypt.hashSync(req.body.password, salt)
