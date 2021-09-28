@@ -8,9 +8,9 @@
           <% for (let i = 0; i < card.length; i++) { %>
             <li>
                 <link rel="icon" type="image/jpeg" href="<%=card[i].img%>">
-                <a href="/card/<%=card[i].id%>"><%=card[i].deck%>: <%=card[i].name %> </a>
+                <a style="color: black" href="/card/<%=card[i].id%>"><%=card[i].deck%>: <%=card[i].name %> </a>
                 <form action="/card/<%= card[i].id %>?_method=DELETE" method="POST">
-                  <input type="submit" value="Delete">
+                  <input class="button-primary" type="submit" value="Delete">
                 </form>
             </li>
             <% } %>
@@ -19,9 +19,9 @@
       <div class="one-half column" style="margin-top: 22%">
       <img class="scale-with-grid"src="/images/clipart3468671.png">
       </div>
-      <button class="u-full-width"><a href="/user/landing">User Home</a></button>
-      <button class="u-full-width"> <a href="/user/myStudyList">My Study Resources</a></button>
-      <button class="u-full-width"> <a href="/card/new">Add a Card to Study</a></button>
+      <button class="u-full-width button-primary"><a href="/user/landing">User Home</a></button>
+      <button class="u-full-width button-primary"> <a href="/user/myStudyList">My Study Resources</a></button>
+      <button class="u-full-width button-primary"> <a href="/card/new">Add a Card to Study</a></button>
       <button class="u-full-width button-primary"> <a href="/user/signout">Sign Out</a></button> 
     </div>
   </div>
