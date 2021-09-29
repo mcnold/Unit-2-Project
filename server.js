@@ -68,7 +68,4 @@ const cardController = require('./controller/cardcontroller')
 app.use('/user', usersController)
 app.use('/card', cardController)
 
-app.listen(PORT, () => {
-    console.log(`Server is listening on PORT: ${PORT}`)
-  })
-
+app.listen(process.env.PORT || 3000)
