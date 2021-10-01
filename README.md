@@ -2,12 +2,16 @@
 Project Choice
 The name of my project is called Tarot Tutor.
 
-Here is a link to test the application:
+Here is a link to the project on GitHub:
 
 https://mcnold.github.io/Unit-2-Project/
 
+Deployed application:
+
+http://tarottutor.herokuapp.com
+
 Project Description
-This is an application that provides information on all of the cards of the Major and Minor Arcana. It allows the user to make a study list and enter the meanings of each card for practice. The user can add or delete cards as they are mastered.
+This is an application that provides information on the cards of the Major and Minor Arcana. It allows the user to make a study list and enter the meanings of each card for practice. The user can add or delete cards as they are mastered.
 
 ![image](https://media.git.generalassemb.ly/user/36412/files/10155100-1b0d-11ec-89f3-06029fc88a6e)
 ![image](https://media.git.generalassemb.ly/user/36412/files/26bba800-1b0d-11ec-84ed-de661a037a56)
@@ -33,9 +37,7 @@ Tarot Tutor utilizes multiple views for optimal navigation, two controllers and 
 Tarot Tutor utilizes two models, User and Card information, with all 7 RESTful routes deployed throughout the application with full Create-Read-Update-Delete functionality.
 
 (A git repository not inside the class repo.)
-Tarot Tutor is available for viewing via GitHub at 
-Be deployed online and accessible to the public via Heroku
-A README.md file with explanations of the technologies used, the approach was taken, unsolved problems, and notes.
+Tarot Tutor is available for viewing via GitHub and is deployed online and accessible to the public via Heroku.
 
 
 Stretch Goals
