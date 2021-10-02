@@ -45,3 +45,12 @@ Login/sign in - User Information is captured in the application
 Portfolio Quality Styling/CSS Framework - Skeleton.CSS is used in application
 3rd Party API for Tarot/Astrology - 3rd party widget is used for Daily Tarot
 Partials - Used for styling uniformity
+
+Tarot Resources
+
+Credit and Thanks to: 
+
+Liz Dean, Author of "The Ultimate Guide to Tarot Spreads"
+Arthur Edward Waite and Pamela Coleman Smith, Creators of the Rider-Waite Tarot
+Biddy Tarot (www.biddytarot.com)
+Labyrinthos (www.labyrinthos.com)

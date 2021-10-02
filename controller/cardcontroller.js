@@ -361,7 +361,6 @@ router.get('/:id/edit', authRequired, (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-  // let's make our route actually update the model
   Card.findByIdAndUpdate(
     req.params.id, 
     req.body,
@@ -369,10 +368,6 @@ router.put('/:id', (req, res) => {
       new: true,
     },
     (error, updatedCard) => {
-      // findByIdAndUpdate updates a fruit with a given id
-      // the new option means we want the update fruit
-      // without this flag, we'll get the fruit as it was
-      // before the update
 
       if (error) {
         console.log(error)
